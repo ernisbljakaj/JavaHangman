@@ -2,7 +2,7 @@ import random
 
 geheim_wort = ["Andrej", "Ernis", "Finn", "Adam", "Safal", "Fabio", "Levin", "Nico"]
 
-zufall_geheimes_wort = random.choice(geheim_wort)
+zufall_geheimes_wort = random.choice(geheim_wort).lower()
 
 buchstaben_geheime_wort = list(zufall_geheimes_wort)
 
@@ -23,7 +23,7 @@ while fail < 6:
     if gefunden:
         print(" ".join(unterstrich_anzahl))
     else:
-        print("Falsch!")
+        print("Fehler: " + str(fail))
         fail += 1
 
 print("Game Over! Das geheime Wort war: " + zufall_geheimes_wort)
