@@ -12,11 +12,17 @@ unterstrich_anzahl = len(zufall_geheimes_wort) * unterstrich
 buchstaben_geheime_wort = list(zufall_geheimes_wort)
 
 print(unterstrich_anzahl)
+fail = 0
+while fail < 6:
 
-input_buchstabe = input("Gib einen Buchstaben ein: ")
+    input_buchstabe = input("Gib einen Buchstaben ein: ")
 
-for i in range(len(buchstaben_geheime_wort)):
-    if buchstaben_geheime_wort[i] == input_buchstabe:
-        unterstrich_anzahl[i] = input_buchstabe
-
-print(unterstrich_anzahl)
+    for i in range(len(buchstaben_geheime_wort)):
+        i=0
+        if buchstaben_geheime_wort[i] == input_buchstabe:
+            unterstrich_anzahl[i] = input_buchstabe
+            print(unterstrich_anzahl)
+        else:
+            fail += 1
+            print("Fehler: ", fail)
+    
