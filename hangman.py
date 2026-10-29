@@ -4,27 +4,26 @@ geheim_wort = ["Andrej", "Ernis", "Finn", "Adam", "Safal", "Fabio", "Levin", "Ni
 
 zufall_geheimes_wort = random.choice(geheim_wort)
 
-
-
-unterstrich = " _ "
-unterstrich_anzahl = len(zufall_geheimes_wort) * unterstrich
-
 buchstaben_geheime_wort = list(zufall_geheimes_wort)
 
-print(unterstrich_anzahl)
+unterstrich_anzahl = ["_"] * len(zufall_geheimes_wort)
+
+print(" ".join(unterstrich_anzahl))
 fail = 0
 
-
 while fail < 6:
-
     input_buchstabe = input("Gib einen Buchstaben ein: ")
-    print("Fehler: ", fail)
+    gefunden = False
+
     for i in range(len(buchstaben_geheime_wort)):
-        i=0
         if buchstaben_geheime_wort[i] == input_buchstabe:
             unterstrich_anzahl[i] = input_buchstabe
-            print(unterstrich_anzahl)
-        else:
-            fail += 1
-            
-    
+            gefunden = True
+
+    if gefunden:
+        print(" ".join(unterstrich_anzahl))
+    else:
+        print("Falsch!")
+        fail += 1
+
+print("Game Over! Das geheime Wort war: " + zufall_geheimes_wort)
