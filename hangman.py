@@ -22,6 +22,9 @@ while fail < 6:
 
     if gefunden:
         print(" ".join(unterstrich_anzahl))
+        if unterstrich_anzahl == buchstaben_geheime_wort:
+            print("Herzlichen Glückwunsch! Du hast das geheime Wort erraten: " + zufall_geheimes_wort)
+            break       
     else:
         print("Fehler: " + str(fail))
         fail += 1
