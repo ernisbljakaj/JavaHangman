@@ -9,9 +9,9 @@ buchstaben_geheime_wort = list(zufall_geheimes_wort)
 unterstrich_anzahl = ["_"] * len(zufall_geheimes_wort)
 
 print(" ".join(unterstrich_anzahl))
-fail = 0
+fail = 1
 
-while fail < 6:
+while fail < 7:
     input_buchstabe = input("Gib einen Buchstaben ein: ")
     gefunden = False
 
